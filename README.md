@@ -4,7 +4,7 @@ It is a colleborative effort of :
 [Amlan Jyoti Sarmah](https://github.com/AmlanJSarmah)  
 [Prisha](https://github.com/prishabhatia46)  
 [Smriti Singh](https://github.com/SmrSingh)  
-[Ayshi Kashyap](https://github.com/ayushikashyap1207)  
+[Ayushi Kashyap](https://github.com/ayushikashyap1207)  
 [Dishita](https://github.com/dishi575)  
 [Aanchal Rathi](https://github.com/AanchalRathi). 
 
