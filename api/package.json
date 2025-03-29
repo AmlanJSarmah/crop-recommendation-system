@@ -1,0 +1,23 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "An API that gets various environmental variables (like Nitrogen content, Potassium contetent etc)  of various Indian States",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "keywords": [
+    "crop-recommendation",
+    "environment-data"
+  ],
+  "author": "A.J.Sarmah, Prisha Bhatia, Ayushi",
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  },
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "express": "^4.21.2"
+  }
+}
