@@ -4,6 +4,8 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.decomposition import PCA
 import pickle
 from flask import Flask, request, jsonify
+from flask_cors import CORS
+
 
 # Constants
 model = joblib.load("recommendation.pkl")
@@ -21,6 +23,7 @@ X_pca = pca.fit_transform(X_scaled)
 
 # Output
 app = Flask(__name__)
+CORS(app, resources={r"/predict": {"origins": "*"}})
 
 # Map Cluster to Crop
 def map_cluster_to_crop(cluster: int):

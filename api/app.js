@@ -1,8 +1,10 @@
 // Constants
 const express = require("express");
 const bodyParser = require("body-parser");
+const mongoose = require("mongoose");
 
 const app = express();
+const stateRoutes = require("./routes/state-data");
 
 // Middlewares
 app.use(bodyParser.json());
@@ -15,8 +17,13 @@ app.use((req, res, next) => {
 });
 
 // App Routes
-app.use((req, res) => {
-  res.status(200).json({ status: "ok" });
-});
+app.use(stateRoutes);
 
-app.listen(8080);
+mongoose
+  .connect("mongodb://localhost:27017/cropRecommendation")
+  .then(() => {
+    app.listen(8080);
+  })
+  .catch((err) => {
+    console.error(err);
+  });
