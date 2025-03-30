@@ -1,6 +1,6 @@
 const stateDataModel = require("../models/state");
 
-exports.stateControllerFunction = (req, res) => {
+exports.stateController = (req, res) => {
   console.log(req.body);
   stateName = req.body.stateName;
   stateName = stateName.replaceAll(" ", "").toLowerCase();
