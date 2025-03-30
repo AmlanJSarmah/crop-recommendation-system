@@ -21,7 +21,7 @@ const stateDataSchema = new mongoose.Schema({
     type: Number,
     require: true,
   },
-  ph: {
+  pH: {
     type: Number,
     required: true,
   },

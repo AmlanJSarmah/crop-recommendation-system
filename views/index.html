@@ -4,6 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Map Viewer</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
     <!-- Leaflet -->
     <link
       rel="stylesheet"
@@ -21,6 +28,22 @@
   </head>
   <body>
     <div id="map"></div>
+    <div class="container-feature container">
+      <h1>🌍 Geographical Data</h1>
+      <h3 id="temp">🌡️ Temperature :</h3>
+      <h3 id="wind">💨 Wind :</h3>
+      <h3 id="humidity">♨️ Humidity :</h3>
+      <h3 id="rainfall">🌧️ Rainfall :</h3>
+      <h3 id="pH">🧪 pH in soil :</h3>
+    </div>
+    <div class="container-target container hidden">
+      <h1>🌾 Recommended Crop</h1>
+      <h3 id="crop1"></h3>
+      <h3 id="crop2"></h3>
+      <h3 id="crop3"></h3>
+      <h3 id="crop4"></h3>
+      <h3 id="crop5"></h3>
+    </div>
     <script type="module" src="script.js"></script>
   </body>
 </html>

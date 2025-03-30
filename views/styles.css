@@ -1,8 +1,98 @@
+/* General Styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+html {
+  font-size: 65.5%;
+  font-family: "Poppins", sans-serif;
+  color: white;
+  --heading: 2.5rem;
+  --data: 2rem;
+}
+
+h1 {
+  font-size: var(--heading);
+  font-weight: 600;
+}
+
+h3 {
+  font-size: var(--data);
+  font-weight: 400;
+}
+
+.container {
+  background-color: #212121;
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  z-index: 2;
+}
+
+.container h1 {
+  margin: 2rem 1rem;
+}
+
+.container h3 {
+  margin: 1rem 1rem;
+}
+
+#pH {
+  margin-bottom: 2rem;
+}
+
+/* Specific Containers */
+.container-feature {
+  position: absolute;
+  top: 0%;
+}
+
+.container-target {
+  position: absolute;
+  top: 0%;
+  left: 80%;
+}
+
+/* Map */
 #map {
   min-height: 100vh;
+  z-index: 1;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Responsiveness */
+@media screen and (max-width: 1070px) {
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  .container {
+    width: 100%;
+  }
+  .container-feature {
+    position: inherit;
+    order: 3;
+  }
+  .container-target {
+    position: inherit;
+    order: 1;
+  }
+
+  .container-target h3 {
+    margin-left: 5rem;
+  }
+
+  #map {
+    order: 2;
+  }
+
+  .hidden {
+    display: flex;
+    flex-direction: column;
+  }
 }
