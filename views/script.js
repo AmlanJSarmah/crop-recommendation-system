@@ -134,7 +134,7 @@ const drawMap = (coords) => {
   }).addTo(map);
 
   // Load India's state boundaries GeoJSON
-  fetch("./india-osm.geojson")
+  fetch("../assets/india-osm.geojson")
     .then((response) => response.json())
     .then((data) => {
       L.geoJSON(data, {
