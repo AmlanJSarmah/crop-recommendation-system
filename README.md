@@ -62,5 +62,5 @@ The server starts at Port 8080
 
 ### Setting up the Frontend
 
-In the `views/script.js` file put your Open Weather API key in the `OPEN_WEATHER_API_KEY` variable inside the strings, it can by clicking (here)[https://openweathermap.org/api] and signing up.  
+In the `views/script.js` file put your Open Weather API key in the `OPEN_WEATHER_API_KEY` variable inside the strings, it can by clicking [here](https://openweathermap.org/api) and signing up.  
 We can now simply run the `index.html` file or start it via live server.
