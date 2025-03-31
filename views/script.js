@@ -1,7 +1,7 @@
 // GLOBAL VARIABLES
 let currentMarker = null;
 
-const OPEN_WEATHER_API_KEY = "405bb47a02d34c19a04227ec7cc312c9";
+const OPEN_WEATHER_API_KEY = "YOUR API KEY";
 
 let featureVariables = {
   temp: null,
