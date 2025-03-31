@@ -1,13 +1,12 @@
 // GLOBAL VARIABLES
 let currentMarker = null;
 
-const OPEN_WEATHER_API_KEY = "YOUR KEY HERE";
+const OPEN_WEATHER_API_KEY = "405bb47a02d34c19a04227ec7cc312c9";
 
 let featureVariables = {
   temp: null,
   wind: null,
   humidity: null,
-  aqi: null,
   rainfall: null,
   pH: null,
   N: null,
@@ -46,6 +45,7 @@ map.on("click", (e) => {
       featureVariables["temp"] = data.main.temp;
       featureVariables["wind"] = data.wind.speed;
       featureVariables["humidity"] = data.main.humidity;
+      console.log(featureVariables);
       return getNPK(currentState);
     })
     .then((data) => {
@@ -63,7 +63,15 @@ map.on("click", (e) => {
     .catch((err) => {
       console.error("Error getting environment data");
       console.error(err);
+      // Set all keys to null
+      const keys = Object.keys(featureVariables);
+      for (let i = 0; i < keys.length; i++) {
+        featureVariables[keys[i]] = null;
+      }
+      // set the data to be empty
+      setFeatureVariables();
       document.querySelector(".container-target").classList.add("hidden");
+      map.removeLayer(currentMarker);
       alert("Error : No data for selected region");
     });
 });
@@ -147,11 +155,23 @@ const setFeatureVariables = () => {
   const rainfallElement = document.getElementById("rainfall");
   const pHElement = document.getElementById("pH");
 
-  tempElement.innerHTML = `🌡️ Temperature : ${featureVariables["temp"]} deg C`;
-  rainfallElement.innerHTML = `🌧️ Rainfall : ${featureVariables["rainfall"]} mm`;
-  pHElement.innerHTML = `🧪 pH in soil : ${featureVariables["pH"]}`;
-  windElement.innerHTML = `💨 Wind : ${featureVariables["wind"]} miles/hr`;
-  humidityElement.innerHTML = `♨️ Humidity : ${featureVariables["humidity"]} %`;
+  tempElement.innerHTML = `🌡️ Temperature : ${
+    featureVariables["temp"] ? featureVariables["temp"] + " deg C" : ""
+  }`;
+  rainfallElement.innerHTML = `🌧️ Rainfall : ${
+    featureVariables["rainfall"]
+      ? featureVariables["rainfall"] * 10 + " mm"
+      : ""
+  }`;
+  pHElement.innerHTML = `🧪 pH in soil : ${
+    featureVariables["pH"] ? featureVariables["pH"] : ""
+  }`;
+  windElement.innerHTML = `💨 Wind : ${
+    featureVariables["wind"] ? featureVariables["wind"] + " miles/hr" : ""
+  }`;
+  humidityElement.innerHTML = `♨️ Humidity : ${
+    featureVariables["humidity"] ? featureVariables["humidity"] + "%" : ""
+  }`;
 };
 
 const displayCrops = (crops) => {

@@ -30,13 +30,11 @@ def map_cluster_to_crop(cluster: int):
     if cluster == 0:
         return ["chickpea", "kidneybeans", "lentil", "pigeonpeas", "mothbeans"]
     elif cluster == 1:
-        return ["banana", "papaya", "rice", "coconut", "jute"]
+        return ["rice",	 "banana", "muskmelon", "watermelon","coconut", "papaya" ,"jute", "coffee"]
     elif cluster == 2:
-        return ["blackgram", "mango", "mothbeans", "maize", "mungbean"]
-    elif cluster == 3:
-        return ["grapes", "apple"]
+        return ["blackgram", "mango", "mungbean", "maize", "cotton", "mothbeans", "pigeonpeas", "pomegranate", "lentil","orange"]
     else:
-        return ["cotton", "watermelon", "muskmelon", "coffee", "orange"]
+        return ["grapes", "apple"]
 
 # Routes
 @app.route('/predict', methods=['POST'])
