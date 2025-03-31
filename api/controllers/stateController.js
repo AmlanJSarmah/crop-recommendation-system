@@ -1,7 +1,6 @@
 const stateDataModel = require("../models/state");
 
 exports.stateController = (req, res) => {
-  console.log(req.body);
   stateName = req.body.stateName;
   stateName = stateName.replaceAll(" ", "").toLowerCase();
   stateDataModel
@@ -16,6 +15,7 @@ exports.stateController = (req, res) => {
       });
     })
     .catch((err) => {
+      console.error(err);
       res.status(404).json({ message: "Undefined Data" });
     });
 };
