@@ -222,9 +222,9 @@ const main = (position) => {
 };
 
 // passed as a callback to navigator's getCurrentPosition if error
-const handleLocationError = () => {
-  alert("Error getting coordinates...");
-  console.error("Error getting coordinates");
+const handleLocationError = (error) => {
+  alert("Cannot Retrieve Location");
+  console.error(error);
 };
 
 if (navigator.geolocation)
