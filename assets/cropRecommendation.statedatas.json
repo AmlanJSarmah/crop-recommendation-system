@@ -1,0 +1,154 @@
+[{
+  "_id": {
+    "$oid": "67e8b6c5cca3bdf1aea28965"
+  },
+  "name": "andhrapradesh",
+  "N": 55.76,
+  "P": 28.61,
+  "K": 15.62,
+  "rainfall": 91.166,
+  "pH": 7.15
+},
+{
+  "_id": {
+    "$oid": "67e8b742cca3bdf1aea28966"
+  },
+  "name": "karnataka",
+  "N": 46.77,
+  "P": 30.59,
+  "K": 22.62,
+  "rainfall": 177,
+  "pH": 5.22
+},
+{
+  "_id": {
+    "$oid": "67e8b7eacca3bdf1aea28967"
+  },
+  "name": "kerala",
+  "N": 42.56,
+  "P": 21.96,
+  "K": 35.47,
+  "rainfall": 305.5,
+  "pH": 5.75
+},
+{
+  "_id": {
+    "$oid": "67e8b88bcca3bdf1aea28968"
+  },
+  "name": "tamilnadu",
+  "N": 50.84,
+  "P": 22.03,
+  "K": 27.12,
+  "rainfall": 99.8,
+  "pH": 7.91
+},
+{
+  "_id": {
+    "$oid": "67e8b8f8cca3bdf1aea28969"
+  },
+  "name": "puducherry",
+  "N": 62.97,
+  "P": 16.38,
+  "K": 20.64,
+  "rainfall": 99.8,
+  "pH": 7
+},
+{
+  "_id": {
+    "$oid": "67e8b963cca3bdf1aea2896a"
+  },
+  "name": "andamanandnicobarislands",
+  "N": 43.66,
+  "P": 38.02,
+  "K": 18.3,
+  "rainfall": 296.7,
+  "pH": 5.95
+},
+{
+  "_id": {
+    "$oid": "67e920c7ec9765613e9b6bf0"
+  },
+  "name": "gujarat",
+  "N": 61.2,
+  "P": 27.31,
+  "K": 11.47,
+  "rainfall": 84.25,
+  "pH": 8.1
+},
+{
+  "_id": {
+    "$oid": "67e92113ec9765613e9b6bf1"
+  },
+  "name": "madhyapradesh",
+  "N": 56.69,
+  "P": 36.45,
+  "K": 6.84,
+  "rainfall": 117.75,
+  "pH": 7
+},
+{
+  "_id": {
+    "$oid": "67e9216cec9765613e9b6bf2"
+  },
+  "name": "chhattisgarh",
+  "N": 58.79,
+  "P": 30.21,
+  "K": 10.98,
+  "rainfall": 140,
+  "pH": 6.6
+},
+{
+  "_id": {
+    "$oid": "67e921ceec9765613e9b6bf3"
+  },
+  "name": "maharashtra",
+  "N": 48.23,
+  "P": 33.16,
+  "K": 18.6,
+  "rainfall": 145.55,
+  "pH": 7.5
+},
+{
+  "_id": {
+    "$oid": "67e922d8ec9765613e9b6bf4"
+  },
+  "name": "rajasthan",
+  "N": 67.27,
+  "P": 29.49,
+  "K": 3.23,
+  "rainfall": 57.4,
+  "pH": 8.65
+},
+{
+  "_id": {
+    "$oid": "67e9284bec9765613e9b6bf5"
+  },
+  "name": "goa",
+  "N": 35.71,
+  "P": 34.5,
+  "K": 29.78,
+  "rainfall": 300.5,
+  "pH": 8.5
+},
+{
+  "_id": {
+    "$oid": "67e928d1ec9765613e9b6bf6"
+  },
+  "name": "dadraandnagarhavelianddamananddiu",
+  "N": 67.39,
+  "P": 28.26,
+  "K": 4.34,
+  "rainfall": 355,
+  "pH": 8.5
+},
+{
+  "_id": {
+    "$oid": "67ea2f28433ba66d6bc1fecc"
+  },
+  "name": "haryana",
+  "N": 70.95,
+  "P": 24.57,
+  "K": 4.47,
+  "rainfall": 61.7,
+  "pH": 8.2
+}]
