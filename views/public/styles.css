@@ -11,4 +11,8 @@ html {
   --font-heading: "Bowlby One SC", sans-serif;
   --heading: 2.5rem;
   --data: 2rem;
+  --title: 4rem;
+  --conditions-text: 1rem;
+  --background-color: #ffffe4;
+  --accent-color: #895129;
 }
