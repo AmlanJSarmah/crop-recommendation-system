@@ -186,7 +186,14 @@ const displayCrops = (crops) => {
 // MAIN
 // passed as a callback to navigator's getCurrentPosition if success
 const main = (position) => {
-  const coords = [position.coords.latitude, position.coords.longitude];
+  let coords = [];
+  const localData = localStorage.getItem("state");
+  if (localData != "null") {
+    const arrCoords = localData
+      .split(",")
+      .map((element) => parseFloat(element));
+    coords = arrCoords;
+  } else coords = [position.coords.latitude, position.coords.longitude];
   // Draw Map
   drawMap(coords);
   // Get feature variables and recommended crops
