@@ -1,9 +1,10 @@
 // GLOBAL VARIABLES
 let currentMarker = null;
 
-const OPEN_WEATHER_API_KEY = "";
+const OPEN_WEATHER_API_KEY = "405bb47a02d34c19a04227ec7cc312c9";
 
 let featureVariables = {
+  stateName: null,
   temp: null,
   wind: null,
   humidity: null,
@@ -13,8 +14,6 @@ let featureVariables = {
   P: null,
   K: null,
 };
-
-let currentState = null;
 
 const map = L.map("map", {
   center: [0, 0],
@@ -38,15 +37,14 @@ map.on("click", (e) => {
   // GETs state data
   getState(lat, lng)
     .then((data) => {
-      currentState = data;
+      featureVariables.stateName = data;
       return getWeather(lat, lng);
     })
     .then((data) => {
       featureVariables["temp"] = data.main.temp;
       featureVariables["wind"] = data.wind.speed;
       featureVariables["humidity"] = data.main.humidity;
-      console.log(featureVariables);
-      return getNPK(currentState);
+      return getNPK(featureVariables.stateName);
     })
     .then((data) => {
       featureVariables["K"] = data.K;
@@ -149,12 +147,14 @@ const drawMap = (coords) => {
 };
 
 const setFeatureVariables = () => {
+  const stateElement = document.getElementById("stateName");
   const tempElement = document.getElementById("temp");
   const windElement = document.getElementById("wind");
   const humidityElement = document.getElementById("humidity");
   const rainfallElement = document.getElementById("rainfall");
   const pHElement = document.getElementById("pH");
 
+  stateElement.innerHTML = `🌍 Geographical Data ${featureVariables.stateName}`;
   tempElement.innerHTML = `🌡️ Temperature : ${
     featureVariables["temp"] ? featureVariables["temp"] + " deg C" : ""
   }`;
@@ -199,14 +199,14 @@ const main = (position) => {
   // Get feature variables and recommended crops
   getState(...coords)
     .then((data) => {
-      currentState = data;
+      featureVariables.stateName = data;
       return getWeather(...coords);
     })
     .then((data) => {
       featureVariables["temp"] = data.main.temp;
       featureVariables["wind"] = data.wind.speed;
       featureVariables["humidity"] = data.main.humidity;
-      return getNPK(currentState);
+      return getNPK(featureVariables.stateName);
     })
     .then((data) => {
       featureVariables["K"] = data.K;

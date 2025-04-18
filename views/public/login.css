@@ -27,6 +27,9 @@ textarea {
   background-color: var(--background-color);
   border-radius: 10px;
   outline: none;
+  padding: 1.5rem;
+  line-height: 0.1;
+  font-size: var(--data);
 }
 
 /* Title */
